@@ -9,6 +9,7 @@ import {
 } from '@mantine/core';
 import CustomNavbar from '../Navbar';
 import CustomHeader from '../Header';
+import { Layoutcontainer } from './Layout.Styled';
 
 type Props = {
   children?: ReactNode;
@@ -25,6 +26,7 @@ export function Layout({ children }: Props) {
       navbar={
         <Navbar
           p="md"
+          style={{ borderRight: '0px' }}
           hiddenBreakpoint="sm"
           hidden={!opened}
           width={{ sm: 200, lg: 250 }}
@@ -33,9 +35,13 @@ export function Layout({ children }: Props) {
         </Navbar>
       }
       header={
-        <Header height={80} p="md">
+        <Header height={80} p="md" style={{ borderBottom: '0px' }}>
           <div
-            style={{ display: 'flex', alignItems: 'center', height: '100%' }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              height: '100%',
+            }}
           >
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
@@ -51,7 +57,7 @@ export function Layout({ children }: Props) {
         </Header>
       }
     >
-      {children}
+      <Layoutcontainer>{children}</Layoutcontainer>
     </AppShell>
   );
 }

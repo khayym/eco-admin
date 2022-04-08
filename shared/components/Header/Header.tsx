@@ -2,7 +2,7 @@ import React from 'react';
 import { Bell } from 'tabler-icons-react';
 import { Settings } from 'tabler-icons-react';
 import { HeaderContainer } from './Header.Styled';
-import { Avatar } from '@mantine/core';
+import { Avatar, Group } from '@mantine/core';
 
 export const CustomHeader = () => {
   return (
