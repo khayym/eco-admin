@@ -11,7 +11,7 @@ import { Button, Image } from '@mantine/core';
 import { CardType } from '../../../../types/house';
 
 export const HouseCard = ({ homes }: any) => {
-  console.log(homes);
+  // console.log(homes);
   return (
     <>
       {homes.map(

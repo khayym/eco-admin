@@ -40,7 +40,6 @@ export const CardHeader = styled.div`
 
 export const ImgConatiner = styled.div`
   width: 100%;
-
   p {
     font-size: 0.8rem;
     font-weight: 300;
