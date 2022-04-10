@@ -2,13 +2,17 @@ import React from 'react';
 import { Bell } from 'tabler-icons-react';
 import { Settings } from 'tabler-icons-react';
 import { HeaderContainer } from './Header.Styled';
-import { Avatar, Group } from '@mantine/core';
+import { Avatar } from '@mantine/core';
+import Add from '../../ui/Add/';
 
 export const CustomHeader = () => {
   return (
     <HeaderContainer>
       <h1>Eco</h1>
       <div className="icon">
+        <div>
+          <Add />
+        </div>
         <div className="ring-icon-div">
           <Bell size={22} strokeWidth={1.5} className="ring-icon" />
         </div>

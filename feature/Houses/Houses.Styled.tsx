@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const HousesLayout = styled.div`
   display: flex;
-  border: 1px solid #fff;
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;

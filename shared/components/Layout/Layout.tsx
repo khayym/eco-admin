@@ -10,6 +10,8 @@ import {
 import CustomNavbar from '../Navbar';
 import CustomHeader from '../Header';
 import { Layoutcontainer } from './Layout.Styled';
+import { useRouter } from 'next/router';
+import { ArrowNarrowLeft } from 'tabler-icons-react';
 
 type Props = {
   children?: ReactNode;
@@ -18,6 +20,8 @@ type Props = {
 export function Layout({ children }: Props) {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
+  const { back, pathname } = useRouter();
+
   return (
     <AppShell
       navbarOffsetBreakpoint="sm"
@@ -57,7 +61,18 @@ export function Layout({ children }: Props) {
         </Header>
       }
     >
-      <Layoutcontainer>{children}</Layoutcontainer>
+      <Layoutcontainer>
+        <div className="page-title">
+          <ArrowNarrowLeft
+            size={22}
+            strokeWidth={1.5}
+            className="arrow-icon"
+            onClick={() => back()}
+          />
+          <p>{pathname} </p>
+        </div>
+        <div>{children}</div>
+      </Layoutcontainer>
     </AppShell>
   );
 }
