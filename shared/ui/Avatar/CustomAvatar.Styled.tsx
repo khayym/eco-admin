@@ -7,6 +7,10 @@ interface Props {
 
 export const AvatarStyled = styled(Avatar)`
   position: relative;
+
+  img {
+    width: fit-content;
+  }
 `;
 
 export const AvatarDivConatiner = styled.div`
