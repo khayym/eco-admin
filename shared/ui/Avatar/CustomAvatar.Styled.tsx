@@ -1,11 +1,13 @@
 import { Avatar } from '@mantine/core';
 import styled from 'styled-components';
 
-interface Props {
+interface TitleProps {
   size?: number;
+  radius?: any;
+  src?: string;
 }
 
-export const AvatarStyled = styled(Avatar)`
+export const AvatarStyled = styled(Avatar)<TitleProps>`
   position: relative;
 
   img {
