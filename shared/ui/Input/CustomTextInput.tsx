@@ -1,4 +1,3 @@
-import { TextInput } from '@mantine/core';
 import React from 'react';
 import { InputType } from '../../../types/input';
 import { TextInputStyled } from './CustomTextInput.Styled';
