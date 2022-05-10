@@ -1,10 +1,9 @@
-import { Avatar, Divider, NumberInput, Radio, RadioGroup } from '@mantine/core';
+import { Divider, NumberInput, Radio, RadioGroup } from '@mantine/core';
 import React from 'react';
-import { At } from 'tabler-icons-react';
 import CustomAvatar from '../../shared/ui/Avatar';
 import CustomTextInput from '../../shared/ui/Input';
 import { AddHouseStyledContainer } from './AddHouse.Styled';
-import { TourInfo } from './sections/tourinfo';
+import { DetailsHomeSection } from './sections/tourinfo';
 
 export const AddHouseConatiner = () => {
   return (
@@ -65,7 +64,7 @@ export const AddHouseConatiner = () => {
         </div>
       </div>
       <Divider my="sm" />
-      <TourInfo />
+      <DetailsHomeSection />
     </AddHouseStyledContainer>
   );
 };

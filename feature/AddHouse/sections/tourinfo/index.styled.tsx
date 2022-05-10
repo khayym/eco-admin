@@ -6,7 +6,13 @@ export const HouseInfoStyledContainer = styled.div`
     padding-bottom: 1rem;
   }
 
-  .house-info-body {
+  label {
+    font-size: 0.9rem;
+  }
+  .multi-feature-select {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    font-weight: 300;
+    font-size: 0.9rem;
   }
 `;
 

@@ -1,11 +1,18 @@
-import { Select } from '@mantine/core';
+import { MultiSelect, Select } from '@mantine/core';
 import React, { useState } from 'react';
 import CustomTextInput from '../../../../shared/ui/Input';
 import CustomNumberInput from '../../../../shared/ui/Input/number';
 import CustomTextArea from '../../../../shared/ui/TextArea';
 import { HouseInfoStyledContainer, PriceTitle } from './index.styled';
 
-export const TourInfo = () => {
+export const DetailsHomeSection = () => {
+  const [multiSelectdata, setMultiSelectdata] = useState([
+    'React',
+    'Angular',
+    'Svelte',
+    'Vue',
+  ]);
+
   const [data, setData] = useState([
     'Dəvəçi',
     'Bakı',
@@ -47,8 +54,6 @@ export const TourInfo = () => {
             getCreateLabel={(query) => `+ Create ${query}`}
             onCreate={(query) => setData((current) => [...current, query])}
             transition="pop-top-left"
-            transitionDuration={80}
-            transitionTimingFunction="ease"
           />
           <CustomNumberInput
             hideControls
@@ -63,6 +68,20 @@ export const TourInfo = () => {
           />
         </PriceTitle>
 
+        <MultiSelect
+          label="Choise features"
+          data={multiSelectdata}
+          placeholder="Select items"
+          searchable
+          className="multi-feature-select"
+          creatable
+          radius="md"
+          size="md"
+          getCreateLabel={(query) => `+ Create ${query}`}
+          onCreate={(query) =>
+            setMultiSelectdata((current) => [...current, query])
+          }
+        />
         <CustomTextArea
           placeholder="Add owner's notes"
           label="Owner's notes"
